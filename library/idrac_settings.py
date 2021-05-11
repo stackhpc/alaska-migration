@@ -89,6 +89,7 @@ def run_module():
         password=dict(type="str", required=True, no_log=True),
         bios=dict(type="dict", required=False),
         idrac=dict(type="dict", required=False),
+        ignore_reboot=dict(type="bool", required=False, default=False),
     )
     module = AnsibleModule(argument_spec=module_args, supports_check_mode=True)
     result = dict(changed=False)
@@ -106,6 +107,7 @@ def run_module():
 
     bios_settings = module.params.get("bios")
     idrac_settings = module.params.get("idrac")
+    ignore_reboot = module.params.get("ignore_reboot")
     if not idrac_settings and not bios_settings:
         # assume we should just wait for all jobs
         wait_for_jobs({module.params["address"]: client})
@@ -141,7 +143,7 @@ def run_module():
         bios_result = client.set_bios_settings(bios_settings)
         if bios_result and bios_result["is_commit_required"]:
             result["changed"] = True
-            reboot_required = bios_result["is_reboot_required"]
+            reboot_required = False if ignore_reboot else bios_result["is_reboot_required"]
             client.commit_pending_bios_changes(reboot=reboot_required)
             wait_for_jobs({module.params["address"]: client})
 
@@ -149,7 +151,7 @@ def run_module():
         idrac_result = client.set_idrac_settings(idrac_settings)
         if idrac_result and idrac_result["is_commit_required"]:
             result["changed"] = True
-            reboot_required = idrac_result["is_reboot_required"]
+            reboot_required = False if ignore_reboot else idrac_result["is_reboot_required"]
             client.commit_pending_idrac_changes(reboot=reboot_required)
             wait_for_jobs({module.params["address"]: client})
 

@@ -39,25 +39,23 @@ import pandas as pd
 df = pd.read_csv('devices.csv', index_col='old_device_name')
 
 result = []
-ignored = []
 shortlist = []
 deferred = []
-for r in node.get_metadata(query=query):
+for r in sorted(node.get_metadata(query=query), key=lambda x: x["key"]):
     name = r["key"]
     prop = r["value"]
     i = prop["instance_name"]
     data = df.loc[name]
     assert data['device_serial'] == prop['device_serial']
     if i in ignore:
-        ignored.append(i)
+        print(f"Ignore {name}\t{i}")
         deferred.append(name)
     else:
         result.append(r)
         shortlist.append(name)
 
-print("Ignoring", sorted(ignored))
 with open("result.yaml", "w") as fh:
-    yaml.dump(sorted(result, key=lambda x: x["key"]), fh, indent=2)
+    yaml.dump(result, fh, indent=2)
 
 def generate_inventory(nodes, name):
     template_str = """[baremetal-compute]
@@ -69,9 +67,15 @@ def generate_inventory(nodes, name):
     template = env.from_string(template_str)
     inventory = template.render(nodes=nodes)
     filename = f"inventory/{name}"
+    nodes.T.to_csv(f"{name}.csv")
     with open(filename, "w") as f:
         f.write(inventory)
     print(f"Inventory written to: {filename}")
 
 generate_inventory(df.loc[shortlist].T, "phase-1")
 generate_inventory(df.loc[deferred].T, "phase-2")
+
+reason = "Migrating to Arcus"
+for n in shortlist:
+    print(f"Setting {n} to maintenance node, reason: {reason}")
+    node.client.baremetal.set_node_maintenance(n, reason="Migrating to Arcus")

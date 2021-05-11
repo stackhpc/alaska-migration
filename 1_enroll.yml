@@ -8,20 +8,28 @@
           host: "{{ bmc_address }}"
           port: 443
           connect_timeout: 5
-          timeout: 10
+          timeout: 5
         delegate_to: localhost
+        register: connection
+        ignore_errors: true
 
-      - name: Enable ipmi for idrac
+      - name: Update ipmi address for idrac
         idrac_settings:
           address: "{{ bmc_address }}"
           username: "{{ bmc_username }}"
           password: "{{ bmc_password }}"
+          ignore_reboot: true
           idrac:
+            "IPMILan.1#Enable": "Enabled"
+            "IPv4.1#DHCPEnable": "Disabled"
             "IPv4Static.1#Address": "{{ new_bmc_address }}"
+            "IPv4Static.1#Gateway": "10.45.255.1"
+            "IPv4Static.1#Netmask": "255.255.0.0"
         delegate_to: localhost
         # Give up after 20 mins, check every 20 seconds
         async: 1200
         poll: 20
+        when: connection is success
 
       - name: Check redfish is back up
         wait_for:
@@ -30,3 +38,13 @@
           connect_timeout: 5
           timeout: 10
         delegate_to: localhost
+
+      - name: Ensure all jobs are finished
+        idrac_settings:
+          address: "{{ new_bmc_address }}"
+          username: "{{ bmc_username }}"
+          password: "{{ bmc_password }}"
+        delegate_to: localhost
+        # Give up after 20 mins, check every 20 seconds
+        async: 1200
+        poll: 20

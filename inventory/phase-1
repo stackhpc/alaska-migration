@@ -1,16 +1,16 @@
 [baremetal-compute]
-sv-b17-u27 bmc_address=10.45.253.39 new_bmc_address=10.45.103.39 new_device_name=sv-br20-u27 device_serial=2YZ04J2
-sv-b17-u28 bmc_address=10.45.253.38 new_bmc_address=10.45.103.38 new_device_name=sv-br20-u28 device_serial=2YTZ3J2
-sv-b16-u7 bmc_address=10.45.253.22 new_bmc_address=10.45.103.22 new_device_name=sv-br19-u7 device_serial=30QY3J2
+gpu-b16-u2 bmc_address=10.45.253.27 new_bmc_address=10.45.103.27 new_device_name=gpu-br19-u2 device_serial=8TH14J2
 sv-b16-u10 bmc_address=10.45.253.19 new_bmc_address=10.45.103.19 new_device_name=sv-br19-u10 device_serial=30N04J2
-sv-b17-u33 bmc_address=10.45.253.33 new_bmc_address=10.45.103.33 new_device_name=sv-br20-u33 device_serial=2YX34J2
-sv-b16-u8 bmc_address=10.45.253.21 new_bmc_address=10.45.103.21 new_device_name=sv-br19-u8 device_serial=30PX3J2
 sv-b16-u15 bmc_address=10.45.253.14 new_bmc_address=10.45.103.14 new_device_name=sv-br19-u15 device_serial=30C44J2
 sv-b16-u18 bmc_address=10.45.253.11 new_bmc_address=10.45.103.11 new_device_name=sv-br19-u18 device_serial=30G34J2
-sv-b16-u6 bmc_address=10.45.253.23 new_bmc_address=10.45.103.23 new_device_name=sv-br19-u6 device_serial=30H14J2
-sv-b16-u9 bmc_address=10.45.253.20 new_bmc_address=10.45.103.20 new_device_name=sv-br19-u9 device_serial=30NY3J2
 sv-b16-u27-28 bmc_address=10.45.253.4 new_bmc_address=10.45.103.4 new_device_name=sv-br19-u27 device_serial=2N1NRH2
-sv-b17-u37 bmc_address=10.45.253.29 new_bmc_address=10.45.103.29 new_device_name=sv-br20-u37 device_serial=30M24J2
 sv-b16-u33-34 bmc_address=10.45.253.1 new_bmc_address=10.45.103.1 new_device_name=sv-br19-u33 device_serial=2ZM04J2
-gpu-b16-u2 bmc_address=10.45.253.27 new_bmc_address=10.45.103.27 new_device_name=gpu-br19-u2 device_serial=8TH14J2
+sv-b16-u6 bmc_address=10.45.253.23 new_bmc_address=10.45.103.23 new_device_name=sv-br19-u6 device_serial=30H14J2
+sv-b16-u7 bmc_address=10.45.253.22 new_bmc_address=10.45.103.22 new_device_name=sv-br19-u7 device_serial=30QY3J2
+sv-b16-u8 bmc_address=10.45.253.21 new_bmc_address=10.45.103.21 new_device_name=sv-br19-u8 device_serial=30PX3J2
+sv-b16-u9 bmc_address=10.45.253.20 new_bmc_address=10.45.103.20 new_device_name=sv-br19-u9 device_serial=30NY3J2
+sv-b17-u27 bmc_address=10.45.253.39 new_bmc_address=10.45.103.39 new_device_name=sv-br20-u27 device_serial=2YZ04J2
+sv-b17-u28 bmc_address=10.45.253.38 new_bmc_address=10.45.103.38 new_device_name=sv-br20-u28 device_serial=2YTZ3J2
+sv-b17-u33 bmc_address=10.45.253.33 new_bmc_address=10.45.103.33 new_device_name=sv-br20-u33 device_serial=2YX34J2
 sv-b17-u36-alt1 bmc_address=10.45.253.30 new_bmc_address=10.45.103.30 new_device_name=sv-br20-u36 device_serial=30JZ3J2
+sv-b17-u37 bmc_address=10.45.253.29 new_bmc_address=10.45.103.29 new_device_name=sv-br20-u37 device_serial=30M24J2
