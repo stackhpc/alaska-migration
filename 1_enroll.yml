@@ -1,0 +1,32 @@
+---
+- hosts: baremetal-compute
+  gather_facts: false
+  tasks:
+    - block:
+      - name: Check redfish is up
+        wait_for:
+          host: "{{ bmc_address }}"
+          port: 443
+          connect_timeout: 5
+          timeout: 10
+        delegate_to: localhost
+
+      - name: Enable ipmi for idrac
+        idrac_settings:
+          address: "{{ bmc_address }}"
+          username: "{{ bmc_username }}"
+          password: "{{ bmc_password }}"
+          idrac:
+            "IPv4Static.1#Address": "{{ new_bmc_address }}"
+        delegate_to: localhost
+        # Give up after 20 mins, check every 20 seconds
+        async: 1200
+        poll: 20
+
+      - name: Check redfish is back up
+        wait_for:
+          host: "{{ new_bmc_address }}"
+          port: 443
+          connect_timeout: 5
+          timeout: 10
+        delegate_to: localhost

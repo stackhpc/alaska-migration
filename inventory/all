@@ -1,0 +1,5 @@
+[all]
+[all:vars]
+bmc_type=ipmi
+bmc_password=calvin
+bmc_username=root

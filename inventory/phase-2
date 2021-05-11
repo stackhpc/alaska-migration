@@ -1,0 +1,21 @@
+[baremetal-compute]
+sv-b16-u14 bmc_address=10.45.253.15 new_bmc_address=10.45.103.15 new_device_name=sv-br19-u14 device_serial=30B14J2
+sv-b16-u5 bmc_address=10.45.253.24 new_bmc_address=10.45.103.24 new_device_name=sv-br19-u5 device_serial=30R24J2
+sv-b17-u32 bmc_address=10.45.253.34 new_bmc_address=10.45.103.34 new_device_name=sv-br20-u32 device_serial=30J34J2
+sv-b17-u35 bmc_address=10.45.253.31 new_bmc_address=10.45.103.31 new_device_name=sv-br20-u35 device_serial=2YY04J2
+sv-b16-u13 bmc_address=10.45.253.16 new_bmc_address=10.45.103.16 new_device_name=sv-br19-u13 device_serial=30CZ3J2
+sv-b16-u3 bmc_address=10.45.253.26 new_bmc_address=10.45.103.26 new_device_name=sv-br19-u3 device_serial=2YYY3J2
+sv-b17-u31 bmc_address=10.45.253.35 new_bmc_address=10.45.103.35 new_device_name=sv-br20-u31 device_serial=30KX3J2
+sv-b16-u16 bmc_address=10.45.253.13 new_bmc_address=10.45.103.13 new_device_name=sv-br19-u16 device_serial=30D34J2
+sv-b17-u30 bmc_address=10.45.253.36 new_bmc_address=10.45.103.36 new_device_name=sv-br20-u30 device_serial=2Z114J2
+sv-b17-u29 bmc_address=10.45.253.37 new_bmc_address=10.45.103.37 new_device_name=sv-br20-u29 device_serial=2YW44J2
+sv-b16-u4 bmc_address=10.45.253.25 new_bmc_address=10.45.103.25 new_device_name=sv-br19-u4 device_serial=2YXZ3J2
+sv-b16-u12 bmc_address=10.45.253.17 new_bmc_address=10.45.103.17 new_device_name=sv-br19-u12 device_serial=30DX3J2
+sv-b16-u11 bmc_address=10.45.253.18 new_bmc_address=10.45.103.18 new_device_name=sv-br19-u11 device_serial=30FY3J2
+sv-b16-u25-26 bmc_address=10.45.253.5 new_bmc_address=10.45.103.5 new_device_name=sv-br19-u25 device_serial=2ZM54J2
+sv-b16-u29-30 bmc_address=10.45.253.3 new_bmc_address=10.45.103.3 new_device_name=sv-br19-u29 device_serial=46RV1H2
+sv-b16-u31-32 bmc_address=10.45.253.2 new_bmc_address=10.45.103.2 new_device_name=sv-br19-u31 device_serial=46SN1H2
+sv-b16-u20 bmc_address=10.45.253.9 new_bmc_address=10.45.103.9 new_device_name=sv-br19-u20 device_serial=30C24J2
+gpu-b16-u1 bmc_address=10.45.253.28 new_bmc_address=10.45.103.28 new_device_name=gpu-br19-u1 device_serial=8TFY3J2
+sv-b17-u34 bmc_address=10.45.253.32 new_bmc_address=10.45.103.32 new_device_name=sv-br20-u34 device_serial=2Z024J2
+sv-b16-u17 bmc_address=10.45.253.12 new_bmc_address=10.45.103.12 new_device_name=sv-br19-u17 device_serial=30F34J2

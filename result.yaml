@@ -1,0 +1,90 @@
+- key: gpu-b16-u2
+  value:
+    device_serial: 8TH14J2
+    instance_name: null
+    name: gpu-b16-u2
+    resource_class: COMPUTE_GPU
+- key: sv-b16-u10
+  value:
+    device_serial: 30N04J2
+    instance_name: null
+    name: sv-b16-u10
+    resource_class: COMPUTE_A
+- key: sv-b16-u15
+  value:
+    device_serial: 30C44J2
+    instance_name: null
+    name: sv-b16-u15
+    resource_class: COMPUTE_A
+- key: sv-b16-u18
+  value:
+    device_serial: 30G34J2
+    instance_name: null
+    name: sv-b16-u18
+    resource_class: COMPUTE_A
+- key: sv-b16-u27-28
+  value:
+    device_serial: 2N1NRH2
+    instance_name: storage-nvme-node-0
+    name: sv-b16-u27-28
+    resource_class: STORAGE_A
+- key: sv-b16-u33-34
+  value:
+    device_serial: 2ZM04J2
+    instance_name: null
+    name: sv-b16-u33-34
+    resource_class: COMPUTE_B
+- key: sv-b16-u6
+  value:
+    device_serial: 30H14J2
+    instance_name: null
+    name: sv-b16-u6
+    resource_class: COMPUTE_A
+- key: sv-b16-u7
+  value:
+    device_serial: 30QY3J2
+    instance_name: null
+    name: sv-b16-u7
+    resource_class: COMPUTE_A
+- key: sv-b16-u8
+  value:
+    device_serial: 30PX3J2
+    instance_name: null
+    name: sv-b16-u8
+    resource_class: COMPUTE_A
+- key: sv-b16-u9
+  value:
+    device_serial: 30NY3J2
+    instance_name: null
+    name: sv-b16-u9
+    resource_class: COMPUTE_A
+- key: sv-b17-u27
+  value:
+    device_serial: 2YZ04J2
+    instance_name: null
+    name: sv-b17-u27
+    resource_class: COMPUTE_A
+- key: sv-b17-u28
+  value:
+    device_serial: 2YTZ3J2
+    instance_name: null
+    name: sv-b17-u28
+    resource_class: COMPUTE_A
+- key: sv-b17-u33
+  value:
+    device_serial: 2YX34J2
+    instance_name: null
+    name: sv-b17-u33
+    resource_class: COMPUTE_A
+- key: sv-b17-u36-alt1
+  value:
+    device_serial: 30JZ3J2
+    instance_name: null
+    name: sv-b17-u36-alt1
+    resource_class: COMPUTE_A
+- key: sv-b17-u37
+  value:
+    device_serial: 30M24J2
+    instance_name: null
+    name: sv-b17-u37
+    resource_class: COMPUTE_A
